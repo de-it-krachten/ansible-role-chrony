@@ -1,0 +1,43 @@
+---
+
+- name: Load variables based on OS type
+  include_vars: "{{ lookup('first_found', params) }}"
+  vars:
+    params:
+      files:
+        - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
+        - '{{ ansible_distribution }}.yml'
+        - "{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
+        - '{{ ansible_os_family }}.yml'
+        - default.yml
+      paths:
+        - 'vars'
+
+- name: Install chrony (RedHat/CentOS)
+  yum:
+    name: chrony
+    state: present
+  when: ansible_os_family == 'RedHat'
+
+- name: Install chrony (Ubuntu/Debian)
+  apt:
+    name: chrony
+    state: present
+  when: ansible_os_family == 'Debian'
+
+- name: Configure chrony
+  template:
+    src: "{{ chrony_conf_template }}"
+    dest: /etc/chrony.conf
+    mode: '0644'
+  register: chrony_conf
+
+- name: Start chrony
+  service:
+    name: chronyd
+    state: started
+    enabled: yes
+
+- name: Synchronize clock
+  command: chronyc -a makestep
+  when: chrony_conf.changed|bool
