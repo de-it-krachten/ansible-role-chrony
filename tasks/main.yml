@@ -13,17 +13,10 @@
       paths:
         - 'vars'
 
-- name: Install chrony (RedHat/CentOS)
-  yum:
-    name: chrony
+- name: Install chrony
+  package:
+    name: "{{ chrony_packages }}"
     state: present
-  when: ansible_os_family == 'RedHat'
-
-- name: Install chrony (Ubuntu/Debian)
-  apt:
-    name: chrony
-    state: present
-  when: ansible_os_family == 'Debian'
 
 - name: Configure chrony
   template:
@@ -38,6 +31,9 @@
     state: started
     enabled: yes
 
-- name: Synchronize clock
+- name: Synchronize clock  # noqa no-handler
   command: chronyc -a makestep
-  when: chrony_conf.changed|bool
+  when:
+    - chrony_conf.changed|bool
+    - ansible_virtualization_type != 'docker'
+    - ansible_virtualization_type != 'containerd'

@@ -6,6 +6,6 @@ FROM {{ item.registry.url }}/{{ item.image }}
 FROM {{ item.image }}
 {% endif %}
 
-RUN sed -i 's/https:\/\//http:\/\//' /etc/yum.repos.d/epel.repo
-RUN sed -i 's/https:\/\//http:\/\//' /etc/yum.repos.d/epel-modular.repo
-RUN dnf update -y
+RUN sed -i '/^\[main\]$/a sslverify=false' /etc/yum.conf
+RUN sed -i '/^\[main\]$/a sslverify=false' /etc/dnf/dnf.conf
+RUN dnf update -y && dnf install -y {{ item.packages|join(' ') }} && dnf clean all
