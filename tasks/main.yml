@@ -21,7 +21,7 @@
 - name: Configure chrony
   template:
     src: "{{ chrony_conf_template }}"
-    dest: /etc/chrony.conf
+    dest: "{{ chrony_conf }}"
     mode: '0644'
   register: chrony_conf
 
@@ -30,7 +30,14 @@
     name: chronyd
     state: started
     enabled: yes
+  register: _chrony_start
 
+- name: Restart chrony
+  service:
+    name: chronyd
+    state: restarted
+  when: not _chrony_start.changed and chrony_conf.changed
+   
 - name: Synchronize clock  # noqa no-handler
   command: chronyc -a makestep
   when:
