@@ -1,11 +1,14 @@
 ---
 
+# Chrony configuration template
 chrony_conf_template: chrony.conf.j2
 
+# NTP servers to connect to
 chrony_servers:
   - 0.nl.pool.ntp.org
   - 1.nl.pool.ntp.org
   - 2.nl.pool.ntp.org
   - 3.nl.pool.ntp.org
 
+# Chrony makestep arguments
 chrony_makestep: '10 3'
