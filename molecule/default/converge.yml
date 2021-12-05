@@ -1,0 +1,8 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+
+    - name: "Include role 'ansible-role-chrony'"
+      include_role:
+        name: "ansible-role-chrony"
