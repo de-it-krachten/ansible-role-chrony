@@ -37,5 +37,3 @@ jobs:
           set -e
           yamllint .
           ansible-lint
-
-
