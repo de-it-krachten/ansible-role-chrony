@@ -1,14 +1,5 @@
 ---
 
-- name: xxx  # noqa no-changed-when 
-  command: ip link add dummy0 type dummy 
-  ignore_errors: yes
-  register: x
-
-- name: xxx
-  debug:
-    var: x
-
 - name: Load variables based on OS type
   include_vars: "{{ lookup('first_found', params) }}"
   vars:
