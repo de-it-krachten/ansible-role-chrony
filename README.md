@@ -16,6 +16,7 @@ Supported platforms
 - Ubuntu 18.04 LTS
 - Ubuntu 20.04 LTS
 - Debian 10 (Buster)
+- Debian 11 (Bullseye)
 
 
 
