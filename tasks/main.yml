@@ -31,16 +31,20 @@
     state: started
     enabled: yes
   register: _chrony_start
+  tags:
+    - molecule-notest
 
 - name: Restart chrony
   service:
     name: chronyd
     state: restarted
   when: not _chrony_start.changed and chrony_conf.changed
+  tags:
+    - molecule-notest
    
 - name: Synchronize clock  # noqa no-handler
   command: chronyc -a makestep
   when:
     - chrony_conf.changed|bool
-    - ansible_virtualization_type != 'docker'
-    - ansible_virtualization_type != 'containerd'
+  tags:
+    - molecule-notest
