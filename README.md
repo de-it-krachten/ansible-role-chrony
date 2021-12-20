@@ -23,8 +23,6 @@ Supported platforms
 Role Variables
 --------------
 <pre><code>
-
-
 # Chrony configuration template
 chrony_conf_template: chrony.conf.j2
 
@@ -44,7 +42,6 @@ Example Playbook
 ----------------
 
 <pre><code>
-
 - name: Converge
   hosts: all
   tasks:
