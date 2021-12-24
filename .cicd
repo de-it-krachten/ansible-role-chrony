@@ -48,6 +48,7 @@ galaxy:
 github:
   active: true
   self_hosted: false
+  fail_fast: true
   owner: de-it-krachten
   repo: ansible-role-chrony
 
@@ -66,6 +67,9 @@ molecule:
     - ubuntu1804
     - ubuntu2004
   converge:
+    playbooks: []
+    vars: {}
+  prepare:
     playbooks: []
     vars: {}
 

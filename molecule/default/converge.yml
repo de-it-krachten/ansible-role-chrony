@@ -2,7 +2,7 @@
 
 - name: Converge
   hosts: all
-  vars: null
+  vars:
   tasks:
     - name: Include role 'ansible-role-chrony'
       include_role:
