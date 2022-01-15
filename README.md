@@ -5,7 +5,6 @@
 
 Installs/configes chrony as NTP client
 
-
 Platforms
 --------------
 
@@ -13,10 +12,13 @@ Supported platforms
 
 - CentOS 7
 - CentOS 8
-- Ubuntu 18.04 LTS
-- Ubuntu 20.04 LTS
+- RockyLinux 8
+- AlmaLinux 8
 - Debian 10 (Buster)
 - Debian 11 (Bullseye)
+- Ubuntu 18.04 LTS
+- Ubuntu 20.04 LTS
+- Fedora 34
 
 
 
@@ -44,9 +46,9 @@ Example Playbook
 <pre><code>
 - name: Converge
   hosts: all
+  vars:
   tasks:
-
-    - name: "Include role 'ansible-role-chrony'"
+    - name: Include role 'ansible-role-chrony'
       include_role:
-        name: "ansible-role-chrony"
+        name: ansible-role-chrony
 </pre></code>
