@@ -27,7 +27,7 @@
 
 - name: Start chrony
   service:
-    name: chronyd
+    name: "{{ chrony_service }}"
     state: started
     enabled: yes
   register: _chrony_start
@@ -36,7 +36,7 @@
 
 - name: Restart chrony
   service:
-    name: chronyd
+    name: "{{ chrony_service }}"
     state: restarted
   when: not _chrony_start.changed and chrony_conf.changed
   tags:
