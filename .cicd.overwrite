@@ -1,4 +1,12 @@
+---
+
+# General info
 generic:
   role_description: |
-    Installs/configes chrony as NTP client
-    
+    Install/configure chrony as NTP client
+
+# Supported platforms
+platforms:
+  alpine3:
+    ci: true
+    supported: true
