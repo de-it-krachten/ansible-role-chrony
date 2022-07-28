@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.1.0...v1.2.0) (2022-07-28)
+
+
+### Features
+
+* Implement ansible-lint v6 support ([6122561](https://github.com/de-it-krachten/ansible-role-chrony/commit/61225613e3c886a5e3aadfd08016a9bb08f7ddc6))
+
 # [1.1.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.0.1...v1.1.0) (2022-07-09)
 
 
