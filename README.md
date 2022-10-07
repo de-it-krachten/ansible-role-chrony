@@ -6,6 +6,15 @@
 Install/configure chrony as NTP client
 
 
+
+## Dependencies
+
+#### Roles
+None
+
+#### Collections
+- community.general
+
 ## Platforms
 
 Supported platforms
@@ -47,6 +56,7 @@ chrony_servers:
 # Chrony makestep arguments
 chrony_makestep: '10 3'
 </pre></code>
+
 
 ### vars/family-RedHat.yml
 <pre><code>
@@ -106,6 +116,6 @@ chrony_service: chrony
   become: "{{ molecule['converge']['become'] | default('yes') }}"
   tasks:
     - name: Include role 'chrony'
-      include_role:
+      ansible.builtin.include_role:
         name: chrony
 </pre></code>
