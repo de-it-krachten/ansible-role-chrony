@@ -41,7 +41,7 @@
   when: not _chrony_start.changed and chrony_conf.changed
   tags:
     - molecule-notest
-   
+
 - name: Synchronize clock  # noqa no-handler
   ansible.builtin.command: chronyc -a makestep
   when:
