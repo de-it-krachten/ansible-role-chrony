@@ -3,8 +3,7 @@
 
 # ansible-role-chrony
 
-Install/configure chrony as NTP client
-
+Install/configure chrony for time synchronization
 
 
 ## Dependencies
@@ -35,7 +34,6 @@ Supported platforms
 - Ubuntu 22.04 LTS
 - Fedora 35
 - Fedora 36
-- Alpine 3
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
