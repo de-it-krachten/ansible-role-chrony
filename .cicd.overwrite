@@ -3,10 +3,4 @@
 # General info
 generic:
   role_description: |
-    Install/configure chrony as NTP client
-
-# Supported platforms
-platforms:
-  alpine3:
-    ci: true
-    supported: true
+    Install/configure chrony for time synchronization
