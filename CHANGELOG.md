@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.2.0...v1.3.0) (2022-10-12)
+
+
+### Features
+
+* Move to FQCN ([d0086a6](https://github.com/de-it-krachten/ansible-role-chrony/commit/d0086a6e2a72945354287d08bf0ca1e6c40e23b6))
+* Update CI to latest standards ([1cb4175](https://github.com/de-it-krachten/ansible-role-chrony/commit/1cb41751b342a61875cfe3a1b2f6209aa87e4a9b))
+* Update CI to latest standards ([adc7c0b](https://github.com/de-it-krachten/ansible-role-chrony/commit/adc7c0b90bdc9f3c1ccab3b7cae52ba6e25d940c))
+
 # [1.2.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.1.0...v1.2.0) (2022-07-28)
 
 
