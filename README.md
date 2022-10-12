@@ -3,8 +3,16 @@
 
 # ansible-role-chrony
 
-Install/configure chrony as NTP client
+Install/configure chrony for time synchronization
 
+
+## Dependencies
+
+#### Roles
+None
+
+#### Collections
+- community.general
 
 ## Platforms
 
@@ -26,7 +34,6 @@ Supported platforms
 - Ubuntu 22.04 LTS
 - Fedora 35
 - Fedora 36
-- Alpine 3
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
@@ -47,6 +54,7 @@ chrony_servers:
 # Chrony makestep arguments
 chrony_makestep: '10 3'
 </pre></code>
+
 
 ### vars/family-RedHat.yml
 <pre><code>
@@ -106,6 +114,6 @@ chrony_service: chrony
   become: "{{ molecule['converge']['become'] | default('yes') }}"
   tasks:
     - name: Include role 'chrony'
-      include_role:
+      ansible.builtin.include_role:
         name: chrony
 </pre></code>
