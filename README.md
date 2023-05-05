@@ -25,6 +25,7 @@ Supported platforms
 - RockyLinux 8
 - RockyLinux 9
 - OracleLinux 8
+- OracleLinux 9
 - AlmaLinux 8
 - AlmaLinux 9
 - Debian 10 (Buster)
@@ -32,8 +33,8 @@ Supported platforms
 - Ubuntu 18.04 LTS
 - Ubuntu 20.04 LTS
 - Ubuntu 22.04 LTS
-- Fedora 35
 - Fedora 36
+- Fedora 37
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
@@ -55,22 +56,6 @@ chrony_servers:
 chrony_makestep: '10 3'
 </pre></code>
 
-
-### vars/family-RedHat.yml
-<pre><code>
-# Chrony main configuration file
-chrony_conf: /etc/chrony.conf
-
-# Chrony keys
-chrony_keyfile: /etc/chrony.keys
-
-# List of packages
-chrony_packages:
-  - chrony
-
-# Name of the service
-chrony_service: chrony
-</pre></code>
 
 ### vars/family-Alpine.yml
 <pre><code>
@@ -104,6 +89,22 @@ chrony_packages:
 chrony_service: chrony
 </pre></code>
 
+### vars/family-RedHat.yml
+<pre><code>
+# Chrony main configuration file
+chrony_conf: /etc/chrony.conf
+
+# Chrony keys
+chrony_keyfile: /etc/chrony.keys
+
+# List of packages
+chrony_packages:
+  - chrony
+
+# Name of the service
+chrony_service: chrony
+</pre></code>
+
 
 
 ## Example Playbook
@@ -111,7 +112,7 @@ chrony_service: chrony
 <pre><code>
 - name: sample playbook for role 'chrony'
   hosts: all
-  become: "{{ molecule['converge']['become'] | default('yes') }}"
+  become: "yes"
   tasks:
     - name: Include role 'chrony'
       ansible.builtin.include_role:
