@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.3.0...v1.3.1) (2023-05-25)
+
+
+### Bug Fixes
+
+* Fix service names from RedHat family ([9563f99](https://github.com/de-it-krachten/ansible-role-chrony/commit/9563f9902257f6e568cd410e9cd373338cd59502))
+
 # [1.3.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.2.0...v1.3.0) (2022-10-12)
 
 
