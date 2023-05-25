@@ -1,0 +1,14 @@
+---
+
+- name: Configure chrony
+  ansible.builtin.template:
+    src: "{{ chrony_conf_template }}"
+    dest: "{{ chrony_conf }}"
+    mode: '0644'
+  register: __chrony_conf
+
+- name: Restart chrony  # noqa no-handler
+  ansible.builtin.service:
+    name: "{{ chrony_service }}"
+    state: restarted
+  when: __chrony_conf.changed

@@ -56,8 +56,7 @@ chrony_servers:
 chrony_makestep: '10 3'
 </pre></code>
 
-
-### vars/family-Alpine.yml
+### defaults/family-Alpine.yml
 <pre><code>
 # Chrony main configuration file
 chrony_conf: /etc/chrony/chrony.conf
@@ -73,7 +72,7 @@ chrony_packages:
 chrony_service: chronyd
 </pre></code>
 
-### vars/family-Debian.yml
+### defaults/family-Debian.yml
 <pre><code>
 # Chrony main configuration file
 chrony_conf: /etc/chrony/chrony.conf
@@ -89,7 +88,7 @@ chrony_packages:
 chrony_service: chrony
 </pre></code>
 
-### vars/family-RedHat.yml
+### defaults/family-RedHat.yml
 <pre><code>
 # Chrony main configuration file
 chrony_conf: /etc/chrony.conf
@@ -102,8 +101,9 @@ chrony_packages:
   - chrony
 
 # Name of the service
-chrony_service: chrony
+chrony_service: chronyd
 </pre></code>
+
 
 
 
