@@ -6,6 +6,7 @@
 Install/configure chrony for time synchronization
 
 
+
 ## Dependencies
 
 #### Roles

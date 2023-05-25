@@ -4,3 +4,8 @@
 generic:
   role_description: |
     Install/configure chrony for time synchronization
+
+# Github
+github:
+  apparmor_profiles:
+    - usr.sbin.chronyd
