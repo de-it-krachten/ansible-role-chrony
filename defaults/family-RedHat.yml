@@ -11,4 +11,4 @@ chrony_packages:
   - chrony
 
 # Name of the service
-chrony_service: chrony
+chrony_service: chronyd

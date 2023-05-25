@@ -1,51 +1,17 @@
 ---
 
 - name: Load variables based on OS type
-  ansible.builtin.include_vars: "{{ lookup('first_found', params) }}"
-  vars:
-    params:
-      files:
-        - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
-        - "{{ ansible_distribution }}.yml"
-        - "family-{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
-        - "family-{{ ansible_os_family }}.yml"
-        - default.yml
-      paths:
-        - 'vars'
+  ansible.builtin.include_tasks: vars.yml
 
 - name: Install chrony
-  ansible.builtin.package:
-    name: "{{ chrony_packages }}"
-    state: present
+  ansible.builtin.include_tasks: install.yml
 
 - name: Configure chrony
-  ansible.builtin.template:
-    src: "{{ chrony_conf_template }}"
-    dest: "{{ chrony_conf }}"
-    mode: '0644'
-  register: chrony_conf
-
-- name: Start chrony
-  ansible.builtin.service:
-    name: "{{ chrony_service }}"
-    state: started
-    enabled: yes
-  register: _chrony_start
-  tags:
-    - molecule-notest
-
-- name: Restart chrony
-  ansible.builtin.service:
-    name: "{{ chrony_service }}"
-    state: restarted
-  when: not _chrony_start.changed and chrony_conf.changed
-  tags:
-    - molecule-notest
+  ansible.builtin.include_tasks: config.yml
 
 - name: Synchronize clock  # noqa no-handler
-  ansible.builtin.command: chronyc -a makestep
+  ansible.builtin.command:
+    cmd: chronyc -a makestep
   changed_when: false
-  when:
-    - chrony_conf.changed|bool
   tags:
     - molecule-notest
