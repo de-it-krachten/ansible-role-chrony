@@ -5,7 +5,7 @@
     src: "{{ chrony_conf_template }}"
     dest: "{{ chrony_conf }}"
     mode: '0644'
-    backup: yes
+    backup: "{{ chrony_conf_backup }}"
   register: __chrony_conf
 
 - name: Restart chrony  # noqa no-handler

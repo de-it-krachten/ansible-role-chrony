@@ -46,6 +46,9 @@ Note:
 # Chrony configuration template
 chrony_conf_template: chrony.conf.j2
 
+# Should a backup be made of the current configuration before changing it
+chrony_conf_backup: false
+
 # NTP servers to connect to
 chrony_servers:
   - 0.nl.pool.ntp.org
