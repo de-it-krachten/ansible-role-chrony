@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.3.1...v1.3.2) (2023-06-06)
+
+
+### Bug Fixes
+
+* Make configuration backup configurable (default=false) ([46562e0](https://github.com/de-it-krachten/ansible-role-chrony/commit/46562e0e7c46fb9647c0e40b131f818726054d35))
+
 ## [1.3.1](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.3.0...v1.3.1) (2023-05-25)
 
 
