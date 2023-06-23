@@ -10,21 +10,3 @@
     name: "{{ chrony_service }}"
     state: started
     enabled: yes
-  ignore_errors: yes
-
-- name: Xxx
-  ansible.builtin.shell: |
-    set -o pipefail
-    ls -ld /run
-    ls -l /run
-    journalctl -xe | grep chrony
-    systemctl status {{ chrony_service }}
-  args:
-    executable: /bin/bash
-  failed_when: false
-  changed_when: false
-  register: xxx
-
-- name: Xxx
-  ansible.builtin.debug:
-    var: xxx
