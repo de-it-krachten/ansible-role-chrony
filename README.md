@@ -29,7 +29,7 @@ Supported platforms
 - OracleLinux 9
 - AlmaLinux 8
 - AlmaLinux 9
-- SUSE Linux Enterprise<sup>1</sup>
+- SUSE Linux Enterprise 15<sup>1</sup>
 - openSUSE Leap 15
 - Debian 10 (Buster)<sup>1</sup>
 - Debian 11 (Bullseye)
@@ -92,6 +92,22 @@ chrony_packages:
 
 # Name of the service
 chrony_service: chrony
+</pre></code>
+
+### defaults/family-Suse.yml
+<pre><code>
+# Chrony main configuration file
+chrony_conf: /etc/chrony.conf
+
+# Chrony keys
+chrony_keyfile: /etc/chrony.keys
+
+# List of packages
+chrony_packages:
+  - chrony
+
+# Name of the service
+chrony_service: chronyd
 </pre></code>
 
 ### defaults/family-RedHat.yml
