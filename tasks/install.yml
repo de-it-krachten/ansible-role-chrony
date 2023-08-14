@@ -5,7 +5,7 @@
     name: "{{ chrony_packages }}"
     state: present
 
-- name: Start chrony
+- name: Start chrony  # noqa ignore-errors
   ansible.builtin.service:
     name: "{{ chrony_service }}"
     state: started
