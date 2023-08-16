@@ -110,6 +110,21 @@
             name: "{{ packages_rm | default([]) }}"
             state: absent
 
+    - name: Family Suse
+      when: ansible_os_family == 'Suse'
+      block:
+
+#        - name: Configure APT to use proxy  # noqa template-instead-of-copy
+#        - name: Update APT cache
+#        - name: Upgrade APT packages
+
+        - name: Install default packages
+          ansible.builtin.package:
+            name:
+              - lsb-release
+              - iproute
+            state: present
+
     - name: Family Debian
       when: ansible_os_family == 'Debian'
       block:

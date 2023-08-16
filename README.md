@@ -94,6 +94,22 @@ chrony_packages:
 chrony_service: chrony
 </pre></code>
 
+### defaults/family-Suse.yml
+<pre><code>
+# Chrony main configuration file
+chrony_conf: /etc/chrony.conf
+
+# Chrony keys
+chrony_keyfile: /etc/chrony.keys
+
+# List of packages
+chrony_packages:
+  - chrony
+
+# Name of the service
+chrony_service: chronyd
+</pre></code>
+
 ### defaults/family-RedHat.yml
 <pre><code>
 # Chrony main configuration file
