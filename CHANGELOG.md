@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.4.0...v1.5.0) (2023-08-16)
+
+
+### Features
+
+* Update supported platforms & CI ([30a562e](https://github.com/de-it-krachten/ansible-role-chrony/commit/30a562ebc4fca8b4942ce29772e58d276311ae4a))
+
 # [1.4.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.3.2...v1.4.0) (2023-08-14)
 
 
