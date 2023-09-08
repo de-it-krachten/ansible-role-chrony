@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.5.0...v1.5.1) (2023-09-08)
+
+
+### Bug Fixes
+
+* Fix loop label to string ([7006e11](https://github.com/de-it-krachten/ansible-role-chrony/commit/7006e1146d7a9878eba819c5bde0692f7b03dce1))
+
 # [1.5.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.4.0...v1.5.0) (2023-08-16)
 
 
