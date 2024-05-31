@@ -13,7 +13,7 @@ Install/configure chrony for time synchronization
 None
 
 #### Collections
-- community.general
+None
 
 ## Platforms
 
@@ -31,13 +31,13 @@ Supported platforms
 - AlmaLinux 9
 - SUSE Linux Enterprise 15<sup>1</sup>
 - openSUSE Leap 15
-- Debian 10 (Buster)<sup>1</sup>
 - Debian 11 (Bullseye)
 - Debian 12 (Bookworm)
 - Ubuntu 20.04 LTS
 - Ubuntu 22.04 LTS
-- Fedora 37
-- Fedora 38
+- Ubuntu 24.04 LTS
+- Fedora 39
+- Fedora 40
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
@@ -94,7 +94,7 @@ chrony_packages:
 chrony_service: chrony
 </pre></code>
 
-### defaults/family-Suse.yml
+### defaults/family-RedHat.yml
 <pre><code>
 # Chrony main configuration file
 chrony_conf: /etc/chrony.conf
@@ -110,7 +110,7 @@ chrony_packages:
 chrony_service: chronyd
 </pre></code>
 
-### defaults/family-RedHat.yml
+### defaults/family-Suse.yml
 <pre><code>
 # Chrony main configuration file
 chrony_conf: /etc/chrony.conf
@@ -134,7 +134,7 @@ chrony_service: chronyd
 <pre><code>
 - name: sample playbook for role 'chrony'
   hosts: all
-  become: "yes"
+  become: 'yes'
   tasks:
     - name: Include role 'chrony'
       ansible.builtin.include_role:
