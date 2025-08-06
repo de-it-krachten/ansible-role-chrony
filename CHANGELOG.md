@@ -1,3 +1,14 @@
+# [1.8.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.7.0...v1.8.0) (2025-08-06)
+
+
+### Features
+
+* Add support for AlmaLinux 10 ([9da5625](https://github.com/de-it-krachten/ansible-role-chrony/commit/9da5625aa09f5cef8c4f768a992c16cc6c2d5264))
+* Add support for Debian 13 (Trixie) ([7645e3f](https://github.com/de-it-krachten/ansible-role-chrony/commit/7645e3fa805bbfad8686bf1e4fff5719defa8a5b))
+* Add support for OracleLinux 10 ([f4457b6](https://github.com/de-it-krachten/ansible-role-chrony/commit/f4457b698967729351c2b8fc9d078a2956df241b))
+* Add support for Red Hat Enterprise Linux 10 ([503a763](https://github.com/de-it-krachten/ansible-role-chrony/commit/503a763b5ab753484cd8929bc2ceb3b421b45a0e))
+* Add support for RockyLinux 10 ([75c8145](https://github.com/de-it-krachten/ansible-role-chrony/commit/75c814591e1a6e3fa18144596916e88b79e0be23))
+
 # [1.7.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.6.0...v1.7.0) (2024-12-29)
 
 
