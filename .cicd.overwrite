@@ -5,6 +5,24 @@ generic:
   role_description: |
     Install/configure chrony for time synchronization
 
+# Supported platforms
+platforms:
+  sles15:
+    supported: true
+    ci: false
+  sles16:
+    supported: true
+    ci: false
+  opensuse15:
+    supported: true
+    ci: true
+  opensuse16:
+    supported: true
+    ci: true
+  ubuntu2004:
+    supported: true
+    ci: true
+
 # Github
 github:
   apparmor_profiles:
