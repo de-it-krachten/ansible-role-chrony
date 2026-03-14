@@ -1,3 +1,13 @@
+# [1.9.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.8.0...v1.9.0) (2026-03-14)
+
+
+### Features
+
+* Added support for Fedora 43 ([db8152e](https://github.com/de-it-krachten/ansible-role-chrony/commit/db8152e14ace48b6994e709e8f5c3de314493877))
+* Added support for openSUSE Leap 16 ([bd0adc8](https://github.com/de-it-krachten/ansible-role-chrony/commit/bd0adc83e17d48efa05851e69303fa6aa7a38729))
+* Added support for SUSE Linux Enterprise 16 ([88d9f83](https://github.com/de-it-krachten/ansible-role-chrony/commit/88d9f8396124adb448a1abb152c5059833c66eff))
+* Drop support for Fedora 41 ([ff9ade5](https://github.com/de-it-krachten/ansible-role-chrony/commit/ff9ade5d86b9ad0bd5da36ffd78f265c8a60b097))
+
 # [1.8.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.7.0...v1.8.0) (2025-08-06)
 
 
