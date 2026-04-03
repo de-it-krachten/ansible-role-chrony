@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.10.0...v1.11.0) (2026-04-03)
+
+
+### Features
+
+* Added support for Ubuntu 26.04 LTS ([b1ec228](https://github.com/de-it-krachten/ansible-role-chrony/commit/b1ec2289eb30a31c56feecfe8da9780c99085532))
+
 # [1.10.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.9.0...v1.10.0) (2026-03-15)
 
 
