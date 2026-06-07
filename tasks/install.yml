@@ -7,7 +7,7 @@
 
 - name: Make chrony work with docker
   when:
-    - ansible_distribution == 'Ubuntu' and ansible_distribution_major_version == "26"
+    - ansible_facts.distribution == 'Ubuntu' and ansible_facts.distribution_major_version == "26"
     - ansible_virtualization_type in [ 'docker', 'container', 'containerd' ]
   block:
 
