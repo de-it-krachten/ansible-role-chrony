@@ -1,3 +1,17 @@
+# [1.12.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.11.0...v1.12.0) (2026-07-26)
+
+
+### Bug Fixes
+
+* Standarize vars.yml ([c265b5f](https://github.com/de-it-krachten/ansible-role-chrony/commit/c265b5f3504243b303a5a35dffba139906687096))
+
+
+### Features
+
+* Add support for ansible-core 2.20+ ([55616a9](https://github.com/de-it-krachten/ansible-role-chrony/commit/55616a923b1173f10a0f39ed886bf2e49e83ff95))
+* Added support for Fedora 44 ([f6a3f16](https://github.com/de-it-krachten/ansible-role-chrony/commit/f6a3f16e7ac33a5aaadef7559ceda8304d894e16))
+* Drop support for Fedora 42 ([4bf657f](https://github.com/de-it-krachten/ansible-role-chrony/commit/4bf657f19aaffc0b5fcf2adeaf6e9c4d9e834e70))
+
 # [1.11.0](https://github.com/de-it-krachten/ansible-role-chrony/compare/v1.10.0...v1.11.0) (2026-04-03)
 
 
