@@ -11,6 +11,10 @@ platforms:
     supported: true
     ci: true
 
+# Molecule
+molecule:
+  driver: docker
+
 # Github
 github:
   apparmor_profiles:
